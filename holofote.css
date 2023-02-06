@@ -1,0 +1,18 @@
+.holofote {
+    background: linear-gradient(90deg, black , white, black );
+    background-repeat: no-repeat;
+    background-size: 70%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: movimentarHolofote 3s ease-in-out alternate infinite;
+}
+
+@keyframes movimentarHolofote {
+    from {
+        background-position: -100%;
+    }
+
+    to {
+        background-position: 200%;
+    }
+}

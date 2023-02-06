@@ -1,0 +1,50 @@
+.loader3 {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 28vw;
+    height: 28vw;
+    box-shadow: 0 0 60px rgb(0, 255, 0), 0 10px 15px rgb(0, 162, 255);
+    animation: girarLoaderCircular 5s linear infinite;
+}
+
+.loader3 span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 255, 0), cyan, rgb(195, 0, 255));
+    border-radius: 50%;
+}
+
+@keyframes girarLoaderCircular {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader3 span::after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    bottom: 5%;
+    right: 5%;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    box-shadow: inset 2px 0 10px rgb(60, 0, 255), inset 0 3px 2px rgb(255, 0, 0);
+    animation: crescer 6s infinite alternate ;
+}
+
+@keyframes crescer {
+    from {
+        transform: scale(1.02);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}

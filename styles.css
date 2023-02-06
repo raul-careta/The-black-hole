@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Audiowide', cursive;
+}
+
+body {
+    background: black;
+}
+
+.embacar-topo {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.embacar-topo-p {
+    display: flex;
+    gap: 1em;
+}
+
+.embacar-topo-logo{
+    background: linear-gradient(15deg, rgb(85, 85, 85), white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 7vw;
+    height: 110vh;
+    animation: embacarHeader 2s infinite alternate ease-in;
+    padding-top: 5em;
+}
+
+@keyframes embacarHeader {
+    0% {
+        filter: blur(0px);
+    }
+
+    80% {
+        filter: blur(3px);
+    }
+
+    100% {
+        filter: blur(4px);
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5vw;
+    font-size: 5vw;
+    width: 80%;
+}
+
+h2 {
+    font-size: 3vw;
+    background: linear-gradient(15deg, rgb(65, 65, 65), white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 80%;
+}
+
+p {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+p:hover {
+    color: rgb(195, 195, 195);
+    animation: bordaPulsante .7s infinite alternate linear;
+}
+
+@keyframes bordaPulsante {
+    from {
+        box-shadow: 0 0 5px rgb(0, 255, 0), inset 0 0 2px rgb(0, 162, 255);
+    }
+
+    to {
+        box-shadow: 0 0 10px rgb(0, 255, 0), inset 0 0 5px rgb(0, 255, 242);
+    }
+}
+
+section {
+    height: 90vh;
+}
+
+.foto1 {
+    background: url(./imagens/foto1.jpg)no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.foto2 {
+    background: url(./imagens/foto2.jpg)no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.foto3 {
+    background: url(./imagens/foto3.jpg)no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(45deg, rgb(25, 25, 25), black);
+}
+
+.div-footer {
+    background: linear-gradient(5deg, rgb(128, 128, 128), white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
