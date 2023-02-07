@@ -117,16 +117,16 @@ p {
 
 p:hover {
     color: rgb(195, 195, 195);
-    animation: bordaPulsante .8s infinite alternate linear;
+    animation: bordaPulsante .6s infinite alternate linear;
 }
 
 @keyframes bordaPulsante {
     from {
-        box-shadow: 0 0 2px rgb(0, 26, 255);
+        box-shadow: 0 0 2px rgb(93, 0, 255), inset 0 -1px 2px rgb(0, 13, 255);
     }
 
     to {
-        box-shadow: 0 0 10px rgb(157, 0, 255);
+        box-shadow: 0 0 10px rgb(195, 0, 255), inset 0 -4px 8px rgb(106, 0, 255);
     }
 }
 
@@ -163,7 +163,7 @@ footer {
     align-items: center;
     width: 100%;
     height: 10vh;
-    background: linear-gradient(45deg, rgb(25, 25, 25), black);
+    background: linear-gradient(45deg, rgb(35, 35, 35), black);
 }
 
 .div-footer {
@@ -205,8 +205,7 @@ footer {
     }
 
     h2 {
-        /* font-size: 4vw; */
-        /* padding-top: 10vw; */
+        font-size: 4vw;
     }
 
     .div-footer {
@@ -233,10 +232,6 @@ footer {
         font-size: 2.3vw;
     }
 
-    h2 {
-        /* padding-top: 15vw; */
-    }
-
     .embacar-topo-p {
         gap: 0;
     }
@@ -252,12 +247,31 @@ footer {
 
 @media (max-width: 500px) {
     .embacar-topo {
+        flex-direction: column;
         position: unset;
     }
 
+    .embacar-topo-p {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .embacar-topo-p p {
+        transform: translateY(-330px);
+        transition: .4s;
+    }
+
     p {
-        padding: 0.5em;
-        font-size: 10px;
+        margin-top: .5em;
+        font-size: 4vw;
+    }
+
+    header {
+        min-height: 58vh;
+    }
+
+    .embacar-topo-logo {
+        font-size: 5vw;
     }
 
     header {
@@ -267,23 +281,36 @@ footer {
     h1 {
         margin-bottom: 16vw;
     }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    section {
+        padding: 20vw 0;
+    }
+
+    .foto3 {
+        height: 80vh;
+        background-size: 150%;
+    }
+
+    .div-footer {
+        font-size: 3.5vw;
+    }
 }
 
 @media (max-width: 300px) {
-    p {
-        font-size: 7px;
-    }
-
-    header {
-        min-height: 58vh;
-    }
-
     h1 {
         margin-bottom: 20vw;
     }
 
-    .embacar-topo-logo {
-        font-size: 4vw;
+    .embacar-topo-p {
+        width: 100%;
+    }
+
+    p {
+        display: block;
     }
 
     section {

@@ -1,0 +1,53 @@
+.menu-label {
+    display: none;
+}
+
+.menu-lines {
+    position: absolute;
+    z-index: 999;
+    cursor: pointer;
+
+    /*posicionamento do icone menu hamburguer*/
+    right: 1em;
+    top: 2em;
+}
+
+span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    transition: .5s;
+    /*cor do menu hamburguer*/
+    background: #cdcdcd;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-checkbox:checked~.embacar-topo-p p {
+    transform: translateY(0);
+}
+
+.menu-checkbox:checked~.menu-label .menu-lines span:nth-child(1) {
+    transform-origin: 100% 0%;
+    transform: rotate(-405deg) scaleX(1.1);
+}
+
+.menu-checkbox:checked~.menu-label .menu-lines span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-checkbox:checked~.menu-label .menu-lines span:nth-child(3) {
+    transform-origin: 100% 100%;
+    transform: rotate(405deg) scaleX(1.1);
+}
+
+/* responsividade */
+@media (max-width: 500px) {
+    .menu-label {
+        display: block;
+    }
+}
