@@ -19,7 +19,6 @@
 
 body {
     background: black;
-    overflow-x: hidden;
     z-index: 50;
 }
 
@@ -28,7 +27,9 @@ body {
     left: 0;
     position: fixed;
     width: 100%;
-    height: 10vh;
+    max-width: 100vw;
+    min-height: 10vh;
+    height: auto;
     background: rgba(0, 0, 0, .5);
     backdrop-filter: blur(5px);
     z-index: 1;
@@ -41,7 +42,8 @@ body {
 
 .embacar-topo-p {
     display: flex;
-    gap: 1em;
+    justify-content: end;
+    flex-wrap: wrap;
 }
 
 .embacar-topo-logo {
@@ -57,11 +59,9 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 7vw;
-    height: 110vh;
+    min-height: 100vh;
     animation: embacarHeader 2s infinite alternate ease-in;
-    padding: 5em 0;
-    position: relative;
+    padding: 7em 0;
 }
 
 @keyframes embacarHeader {
@@ -80,8 +80,8 @@ header {
 
 h1 {
     text-align: center;
-    margin-bottom: 5vw;
-    font-size: 5vw;
+    margin-bottom: 7vw;
+    font-size: 6vw;
     width: 80%;
 }
 
@@ -93,7 +93,6 @@ h2 {
     -webkit-text-fill-color: transparent;
     text-align: center;
     margin: 0 auto;
-    margin-top: 2em;
     width: 80%;
     animation: animarH2 1s infinite ease-in-out;
 }
@@ -111,9 +110,9 @@ h2 {
 
 p {
     cursor: pointer;
-    padding: 5px;
+    padding: 1em;
     border-radius: 5px;
-    font-size: 1vmax;
+    font-size: 14px;
 }
 
 p:hover {
@@ -132,7 +131,12 @@ p:hover {
 }
 
 section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 8vw 0;
     height: 90vh;
+    overflow-x: hidden;
 }
 
 .foto1 {
@@ -169,4 +173,120 @@ footer {
     -webkit-text-fill-color: transparent;
     font-size: 1.3vw;
     font-weight: 400;
+}
+
+@media (min-width: 1400px) {
+    p {
+        font-size: 2vw;
+    }
+
+    .embacar-topo-p {
+        gap: 2vw;
+    }
+}
+
+@media (max-width: 1100px) {
+    .foto2 {
+        background-size: 130vw;
+    }
+
+    h1 {
+        margin-bottom: 14vw;
+    }
+}
+
+@media (max-width: 850px) {
+    .foto2 {
+        background-size: 160vw;
+    }
+
+    section {
+        height: 70vh;
+    }
+
+    h2 {
+        /* font-size: 4vw; */
+        /* padding-top: 10vw; */
+    }
+
+    .div-footer {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 680px) {
+    .foto2 {
+        background-size: 190vw;
+    }
+
+    header {
+        justify-content: start;
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+}
+
+@media (max-width: 570px) {
+    p {
+        font-size: 2.3vw;
+    }
+
+    h2 {
+        /* padding-top: 15vw; */
+    }
+
+    .embacar-topo-p {
+        gap: 0;
+    }
+
+    .embacar-topo-logo {
+        font-size: 3vw;
+    }
+
+    .foto2 {
+        background-size: 230vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .embacar-topo {
+        position: unset;
+    }
+
+    p {
+        padding: 0.5em;
+        font-size: 10px;
+    }
+
+    header {
+        padding: 3em;
+    }
+
+    h1 {
+        margin-bottom: 16vw;
+    }
+}
+
+@media (max-width: 300px) {
+    p {
+        font-size: 7px;
+    }
+
+    header {
+        min-height: 58vh;
+    }
+
+    h1 {
+        margin-bottom: 20vw;
+    }
+
+    .embacar-topo-logo {
+        font-size: 4vw;
+    }
+
+    section {
+        height: 60vh;
+    }
 }
