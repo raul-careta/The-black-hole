@@ -60,7 +60,7 @@ header {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    animation: embacarHeader 2s infinite alternate ease-in;
+    animation: embacarHeader 1.4s infinite alternate ease-in;
     padding: 7em 0;
 }
 
@@ -69,8 +69,8 @@ header {
         filter: blur(0px);
     }
 
-    80% {
-        filter: blur(3px);
+    90% {
+        filter: blur(2px);
     }
 
     100% {
@@ -271,7 +271,7 @@ footer {
     }
 
     .embacar-topo-logo {
-        font-size: 5vw;
+        font-size: 6vw;
     }
 
     header {
